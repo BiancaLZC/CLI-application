@@ -1,5 +1,8 @@
-const contacts = require("./contacts");
-const argv = require("yargs").argv;
+import * as contacts from "./contacts.js";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+
+const argv = yargs(hideBin(process.argv)).argv;
 
 
 async function invokeAction({ action, id, name, email, phone }) {
